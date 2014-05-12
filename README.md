@@ -1,1 +1,2 @@
+[!(https://www.codeship.io/projects/e9527160-bc58-0131-29cf-1eb06adcdad9/status)](https://www.codeship.io/projects/e9527160-bc58-0131-29cf-1eb06adcdad9/status)
 [![Gitter chat](https://badges.gitter.im/recommendsy.png)](https://gitter.im/recommendsy)
