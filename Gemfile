@@ -5,6 +5,7 @@ group :test, :development do
   gem 'pry-nav'
 end
 
+gem 'capistrano', '2.15.5'
 gem 'pg'
 gem 'etsy'
 gem 'amelia-bootstrap-rails'
