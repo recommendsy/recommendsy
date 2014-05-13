@@ -21,7 +21,7 @@ role :app, "107.170.136.214"                          # This may be the same as 
 # these http://github.com/rails/irs_process_scripts
 
 # If you are using Passenger mod_rails uncomment this:
-after "finalize_update","deploy:config_symlink"
+after "deploy:finalize_update","deploy:config_symlink"
 
 namespace :deploy do
   task :start do ; end
