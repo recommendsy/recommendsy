@@ -1,0 +1,8 @@
+<h1> this is index </h1>
+<% if user_signed_in? %>
+  you are logged in as <%= current_user.name %>
+  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+<% else %>
+  <%= link_to 'signin with etsy', user_omniauth_authorize_path(:etsy) %>
+<% end %>
+

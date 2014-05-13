@@ -5,6 +5,10 @@ group :test, :development do
   gem 'pry-nav'
 end
 
+gem 'pry'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-etsy'
 gem 'capistrano', '2.15.5'
 gem 'pg'
 gem 'etsy'
