@@ -31,7 +31,7 @@ namespace :deploy do
   end
 
    task :config_symlink do
-    run "cp #{shared_path}/database.yml #{release_path}/config/database.yml"
+    # run "cp #{shared_path}/database.yml #{release_path}/config/database.yml"
     run "cp #{shared_path}/application.yml #{release_path}/config/application.yml"
   end
 
