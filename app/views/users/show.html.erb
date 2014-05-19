@@ -1,0 +1,11 @@
+<%= display_name(@user) %>
+
+<ul id="favorite_list">
+  <% @user_favorites.each do |favorite| %>
+    <li>
+      <h3><%= link_to favorite.title, favorite.url %></h3>
+      <p><%= favorite.description %></p>
+      <img src="<%= favorite.images.first.square %>"/>
+    </li>
+  <% end %>
+</ul>

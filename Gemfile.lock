@@ -1,3 +1,12 @@
+GIT
+  remote: git@github.com:recommendsy/etsy.git
+  revision: e9434ec8cad07bc6b22919e32e66dd56681940ac
+  branch: sandbox_bug
+  specs:
+    etsy (0.2.6)
+      json (>= 1.5.0)
+      oauth (~> 0.4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,9 +36,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    amelia-bootstrap-rails (0.0.1)
-      railties (>= 3.1)
-      thor
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     bootstrap-sass (3.1.1.1)
@@ -57,9 +63,6 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    etsy (0.2.6)
-      json (>= 1.5.0)
-      oauth (~> 0.4.0)
     execjs (2.0.2)
     gibbon (1.1.2)
       httparty
@@ -187,12 +190,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  amelia-bootstrap-rails
   bootstrap-sass
   capistrano (= 2.15.5)
   coffee-rails (~> 4.0.0)
   devise
-  etsy
+  etsy!
   gibbon
   jbuilder (~> 2.0)
   jquery-rails
