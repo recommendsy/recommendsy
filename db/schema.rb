@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513153203) do
+ActiveRecord::Schema.define(version: 20140519184427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorites", force: true do |t|
+    t.integer  "listing_id"
+    t.integer  "user_id"
+    t.datetime "favorited_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "listings", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "listing_id"
+    t.string   "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "listing_url"
+    t.string   "images",      default: [], array: true
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

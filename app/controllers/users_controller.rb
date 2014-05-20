@@ -3,8 +3,17 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    etsy_user = Etsy.user(@user.nickname)
-    @user_favorites = etsy_user.favorites
+    @user_favorites = @user.grab_favorites
+  end
+
+  def etsy_poke_email
+    @user = User.find(params[:id])
+    EtsyMailer.etsy_poke(@user).deliver
+    respond_to do |format|
+      format.json {
+        render json: 'success'
+      }
+    end
   end
 
   def authenticate_admin

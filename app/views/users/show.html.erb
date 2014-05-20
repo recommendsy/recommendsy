@@ -1,11 +1,28 @@
-<%= display_name(@user) %>
+  
+<div class="row">
 
-<ul id="favorite_list">
-  <% @user_favorites.each do |favorite| %>
-    <li>
-      <h3><%= link_to favorite.title, favorite.url %></h3>
-      <p><%= favorite.description %></p>
-      <img src="<%= favorite.images.first.square %>"/>
-    </li>
-  <% end %>
-</ul>
+  <h1><%= display_name(@user) %> has favorited these items. Maybe you should get them a gift?</h1>
+
+  <div id="user_id" style="display:none;"><%= @user.id %></div>
+
+  <div id="buttons">
+    <button id="etsy_poke">Remind <%= display_name(@user) %> to update their favorite list</button>
+  </div>
+
+  <br>
+
+  <ul id="favorite_list">
+    <% @user_favorites.each do |favorite| %>
+      <div class="col-xs-4">
+        <li id="<%= favorite.id %>" class="listing_item">
+          <%# binding.pry %>
+
+          <%= link_to image_tag(favorite.listing.images.first), favorite.listing.listing_url, target: "_blank" %>
+          <p><%= link_to favorite.listing.title[0,45], favorite.listing.listing_url %></p>
+          <p><%= favorite.listing.price %></p>
+        </li>
+      </div>
+    <% end %>
+  </ul>
+
+</div>

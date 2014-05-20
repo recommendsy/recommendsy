@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   end
   get '/users/:id' => 'users#show', as: 'user'
 
+  # Mailer Routes
+  get '/users/:id/poke' => 'users#etsy_poke_email', as: 'etsy_poke'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
