@@ -4,8 +4,4 @@ $(document).ready () ->
     url = '/users/' + user_id + '/poke'
     $.ajax({
       url: url
-      success: (data) ->
-        alert('Email has been sent!')
-      error: (data) ->
-        alert('Error emailing')
     })

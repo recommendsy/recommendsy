@@ -37,7 +37,6 @@ class User < ActiveRecord::Base
         image.full
       end
 
-
       new_listing.update(images: favorite_images)
 
       if !self.listings.include? new_listing
