@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140521223118) do
+ActiveRecord::Schema.define(version: 20140522235140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorite_stores", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "favorites", force: true do |t|
     t.integer  "listing_id"
@@ -36,15 +41,13 @@ ActiveRecord::Schema.define(version: 20140521223118) do
   end
 
   create_table "reminders", force: true do |t|
-    t.date   "reminder_date"
-    t.string "title"
-  end
-
-  create_table "user_reminders", force: true do |t|
+    t.date    "reminder_date"
+    t.string  "title"
+    t.integer "recipient_id"
     t.integer "user_id"
-    t.integer "reminder_id"
     t.boolean "sent_status"
-    t.date    "lead_time"
+    t.integer "lead_time"
+    t.boolean "active"
   end
 
   create_table "users", force: true do |t|
