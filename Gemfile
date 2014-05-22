@@ -5,7 +5,7 @@ group :test, :development do
   gem 'pry-nav'
 end
 
-gem 'pry'
+gem 'momentjs-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-etsy'
