@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :listings, through: :favorites
   has_many :user_reminders
   has_many :reminders, through: :user_reminders
+  has_many :recipients, through: :reminders
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :omniauthable, :omniauth_providers => [:etsy]
