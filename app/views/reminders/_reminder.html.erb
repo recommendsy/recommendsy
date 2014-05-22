@@ -1,12 +1,16 @@
 
 <div class="col-sm-12">
-  <h2><%= reminder.title %></h2>
+  <h2 class="reminder-title"><%= reminder.title %></h2>
+  <span class="button-checkbox">
+    <button type="button" class="btn" data-color="primary"><i class="glyphicon glyphicon-envelope"></i></button>
+    <input type="checkbox" class="hidden" checked />
+</span>
   <hr/>
-  <div class="date-picker"  data-date="<%= pretty_format(reminder) %>" data-keyboard="true">
+  <div class="date-picker <%= date_type(reminder) %>"  data-date="<%= pretty_format(reminder) %>" data-keyboard="true">
     <div class="date-container pull-left">
-      <h4 class="weekday">Monday</h4>
-      <h2 class="date">Februray 4th</h2>
-      <h4 class="year pull-right">2014</h4>
+      <h4 class="weekday"><%= pretty_format(reminder, "%A") %></h4>
+      <h2 class="date"><%= pretty_format(reminder, "%B #{reminder.ordinalize}") %></h2>
+      <h4 class="year pull-right"><%= pretty_format(reminder, "%Y") %></h4>
     </div>
     <span data-toggle="datepicker" data-type="subtract" class="fa fa-angle-left"></span>
     <span data-toggle="datepicker" data-type="add" class="fa fa-angle-right"></span>
