@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'static#index'
 
   #reminder routes
-  get 'reminders' => 'reminder#show'
+  get '/users/:id/reminders' => 'reminders#show'
 
   #user routes
   devise_for :users, :controllers => {:omniauth_callbacks => 'users/omniauth_callbacks'}

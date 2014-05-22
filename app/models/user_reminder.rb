@@ -1,4 +1,4 @@
 class UserReminder < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :reminders
+  belongs_to :user
+  belongs_to :reminder
 end

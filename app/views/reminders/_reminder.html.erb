@@ -1,7 +1,8 @@
-<div class="col-sm-4">
-  <h2>By Day</h2>
+
+<div class="col-sm-12">
+  <h2><%= reminder.title %></h2>
   <hr/>
-  <div class="date-picker"  data-date="2014/09/02" data-keyboard="true">
+  <div class="date-picker"  data-date="<%= pretty_format(reminder) %>" data-keyboard="true">
     <div class="date-container pull-left">
       <h4 class="weekday">Monday</h4>
       <h2 class="date">Februray 4th</h2>

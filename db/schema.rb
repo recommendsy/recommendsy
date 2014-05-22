@@ -16,11 +16,6 @@ ActiveRecord::Schema.define(version: 20140521223118) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "favorite_stores", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "favorites", force: true do |t|
     t.integer  "listing_id"
     t.integer  "user_id"

@@ -1,2 +1,0 @@
-class ReminderController < ApplicationController
-end

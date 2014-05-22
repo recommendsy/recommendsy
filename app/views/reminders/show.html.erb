@@ -1,0 +1,7 @@
+<div class="row">
+  <% @reminders.each do |reminder| %>
+    <div class="col-xs-4">
+      <%= render 'reminder', reminder: reminder %>
+    </div>
+  <% end %>
+</div>  
