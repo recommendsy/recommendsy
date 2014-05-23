@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #reminder routes
   get '/users/:id/reminders' => 'reminders#show'
 
+  post '/users/:id/reminders' => 'reminders#update'
+
   #user routes
   devise_for :users, :controllers => {:omniauth_callbacks => 'users/omniauth_callbacks'}
   devise_scope :user do
