@@ -1,3 +1,5 @@
+<div id="current-user-id" class="hidden"><%= current_user.id %></div>
+
 <div class="row">
   <div class="col-xs-12">
     <% @reminders.each do |reminder| %>
@@ -5,5 +7,9 @@
         <%= render 'reminder', reminder: reminder %>
       </div>
     <% end %>
+    <div class="col-xs-4" id="placeholder-datepicker">
+      <i class="fa fa-plus"></i>
+      <span id="placeholder-text">Add New Date</span>
+    </div>
   </div>
 </div>
