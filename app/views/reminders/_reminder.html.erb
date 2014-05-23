@@ -3,7 +3,7 @@
   <h2 class="reminder-title"><%= reminder.title %></h2>
   <span class="button-checkbox">
     <button type="button" class="btn" data-color="primary"><i class="glyphicon glyphicon-envelope"></i></button>
-    <input type="checkbox" class="hidden" checked />
+    <input id="<%= reminder.id %>" type="checkbox" class="hidden reminder-checkbox" checked />
 </span>
   <hr/>
   <div class="date-picker <%= date_type(reminder) %>"  data-date="<%= pretty_format(reminder) %>" data-keyboard="true">
