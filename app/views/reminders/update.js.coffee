@@ -1,0 +1,1 @@
+console.log "Check box is <%= @reminder.active %>"
